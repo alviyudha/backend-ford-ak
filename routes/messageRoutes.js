@@ -1,0 +1,17 @@
+import express from 'express'
+import { createMessageUser, deleteMessageUser, getMessageUser, getMessageUserById, updateMessageUser } from '../controller/messageController.js';
+import { verifyUser } from '../middleware/verifyUser.js';
+import { adminOnly } from '../middleware/adminOnly.js';
+
+
+const router = express.Router();
+router.get('/messageuser',getMessageUser)
+router.get('/messageuser/:id',getMessageUserById)
+router.post('/messageuser',verifyUser,createMessageUser)
+router.patch('/messageuser/:id',verifyUser,updateMessageUser)
+router.delete('/messageuser/:id',verifyUser,adminOnly,deleteMessageUser)
+
+
+
+
+export default router;
