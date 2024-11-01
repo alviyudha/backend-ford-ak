@@ -48,7 +48,7 @@ export const createTrims = async (req, res) => {
   const imgSize = backgroundImg.size;
   const imgExt = path.extname(backgroundImg.originalname);
   const imgName = backgroundImg.filename;
-  const imgUrl = `${req.protocol}://${req.get("host")}/bg-img-car/${imgName}`;
+  const imgUrl = `${req.protocol}://${req.get("host")}/api/bg-img-car/${imgName}`;
   const allowedImgTypes = [".png", ".jpg", ".jpeg"];
 
   if (!allowedImgTypes.includes(imgExt.toLowerCase())) {
@@ -60,7 +60,7 @@ export const createTrims = async (req, res) => {
   const pdfSize = brochure.size;
   const pdfExt = path.extname(brochure.originalname);
   const pdfName = brochure.filename;
-  const pdfUrl = `${req.protocol}://${req.get("host")}/brochure/${pdfName}`;
+  const pdfUrl = `${req.protocol}://${req.get("host")}/api/brochure/${pdfName}`;
   const allowedPdfTypes = [".pdf"];
 
   if (!allowedPdfTypes.includes(pdfExt.toLowerCase())) {
@@ -182,7 +182,7 @@ export const updateTrims = async (req, res) => {
       const imgSize = backgroundImg.size;
       const imgExt = path.extname(backgroundImg.originalname);
       const imgName = backgroundImg.filename;
-      const imgUrl = `${req.protocol}://${req.get("host")}/bg-img-car/${imgName}`;
+      const imgUrl = `${req.protocol}://${req.get("host")}/api/bg-img-car/${imgName}`;
       const allowedImgTypes = [".png", ".jpg", ".jpeg"];
 
       if (!allowedImgTypes.includes(imgExt.toLowerCase())) {
@@ -200,7 +200,7 @@ export const updateTrims = async (req, res) => {
       const pdfSize = brochure.size;
       const pdfExt = path.extname(brochure.originalname);
       const pdfName = brochure.filename;
-      const pdfUrl = `${req.protocol}://${req.get("host")}/brochure/${pdfName}`;
+      const pdfUrl = `${req.protocol}://${req.get("host")}/api/brochure/${pdfName}`;
       const allowedPdfTypes = [".pdf"];
 
       if (!allowedPdfTypes.includes(pdfExt.toLowerCase())) {
@@ -219,7 +219,7 @@ export const updateTrims = async (req, res) => {
       const imgViewSize = imgView.size;
       const imgViewExt = path.extname(imgView.originalname);
       const imgViewName = imgView.filename;
-      const imgViewUrl = `${req.protocol}://${req.get("host")}/img-view/${imgViewName}`;
+      const imgViewUrl = `${req.protocol}://${req.get("host")}/api/img-view/${imgViewName}`;
       const allowedImgViewTypes = [".png", ".jpg", ".jpeg"];
 
       if (!allowedImgViewTypes.includes(imgViewExt.toLowerCase())) {

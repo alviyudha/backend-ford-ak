@@ -51,7 +51,7 @@ export const createDealer = async (req,res) => {
     const imgSize = imgDealer.size;
     const imgExt = path.extname(imgDealer.originalname);
     const imgName = imgDealer.filename;
-    const imgUrl = `${req.protocol}://${req.get("host")}/dealer/${imgName}`;
+    const imgUrl = `${req.protocol}://${req.get("host")}/api/dealer/${imgName}`;
     const allowedImgTypes = ['.png', '.jpg', '.jpeg'];
 
     if (!allowedImgTypes.includes(imgExt.toLowerCase())) {
@@ -105,7 +105,7 @@ export const createDealer = async (req,res) => {
                 const imgSize = imgDealer.size;
                 const imgExt = path.extname(imgDealer.originalname);
                 const imgName = imgDealer.filename;
-                const imgUrl = `${req.protocol}://${req.get("host")}/dealer/${imgName}`;
+                const imgUrl = `${req.protocol}://${req.get("host")}/api/dealer/${imgName}`;
                 const allowedImgTypes = ['.png', '.jpg', '.jpeg'];
     
                 if (!allowedImgTypes.includes(imgExt.toLowerCase())) {
