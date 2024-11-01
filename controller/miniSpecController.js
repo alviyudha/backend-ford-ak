@@ -67,7 +67,7 @@ export const createMiniSpec = async (req, res) => {
   const imgExt = path.extname(imgMiniSpec.originalname);
   const allowedImgTypes = [".png", ".jpg", ".jpeg"];
   const imgName = imgMiniSpec.filename;
-  const imgUrl = `${req.protocol}://${req.get("host")}/img-minispec/${imgName}`;
+  const imgUrl = `${req.protocol}://${req.get("host")}/api/img-minispec/${imgName}`;
 
   if (!allowedImgTypes.includes(imgExt.toLowerCase())) {
     fs.unlinkSync(path.join("public/img-minispec", imgName));

@@ -52,7 +52,7 @@ export const createColor = async (req, res) => {
     const imgSize = colorsImageFile.size;
     const imgExt = path.extname(colorsImageFile.originalname);
     const imgName = colorsImageFile.filename;
-    const imgUrl = `${req.protocol}://${req.get("host")}/cars-color/${imgName}`;
+    const imgUrl = `${req.protocol}://${req.get("host")}/api/api/cars-color/${imgName}`;
     const allowedImgTypes = ['.png', '.jpg', '.jpeg'];
 
     if (!allowedImgTypes.includes(imgExt.toLowerCase())) {
@@ -118,7 +118,7 @@ export const updateColor = async (req, res) => {
             }
 
             updatedData.colorsImage = newColorsImage.filename;
-            updatedData.urlcolorsImage = `${req.protocol}://${req.get("host")}/cars-color/${newColorsImage.filename}`;
+            updatedData.urlcolorsImage = `${req.protocol}://${req.get("host")}/api/cars-color/${newColorsImage.filename}`;
             safeDelete(`./public/cars-color/${currentData.colorsImage}`);
         }
 

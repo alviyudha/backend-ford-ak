@@ -52,7 +52,7 @@ export const createImgSlide = async (req, res) => {
     const imgSize = imgSlide.size;
     const imgExt = path.extname(imgSlide.originalname);
     const imgName = imgSlide.filename;
-    const imgUrl = `${req.protocol}://${req.get("host")}/image-slide/${imgName}`;
+    const imgUrl = `${req.protocol}://${req.get("host")}/api/image-slide/${imgName}`;
     const allowedImgTypes = ['.png', '.jpg', '.jpeg'];
 
     if (!allowedImgTypes.includes(imgExt.toLowerCase())) {
@@ -102,7 +102,7 @@ export const updateImgSlide = async (req, res) => {
             }
 
             updatedData.image = newImage.filename;  // Menyimpan nama file baru
-            updatedData.urlImage = `${req.protocol}://${req.get("host")}/image-slide/${newImage.filename}`;  // Menyimpan URL baru
+            updatedData.urlImage = `${req.protocol}://${req.get("host")}/api/image-slide/${newImage.filename}`;  // Menyimpan URL baru
 
             safeDelete(`./public/img-slide/${currentData.image}`);  // Menghapus gambar lama
         }
