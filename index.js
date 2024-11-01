@@ -18,6 +18,8 @@ import joinData from "./routes/joinDataRoutes.js";
 import messageUser from "./routes/messageRoutes.js";
 import auth from "./routes/AuthRoutes.js";
 import session from "express-session";
+import dotenv from 'dotenv';
+dotenv.config();
 
 const app = express();
 
